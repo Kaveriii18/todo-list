@@ -1,0 +1,204 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f4f6fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #8e6dfd;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.week {
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.week h3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.day {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.day:hover {
+  transform: scale(1.05);
+}
+
+.day.completed {
+  background: #8e6dfd;
+  color: white;
+  border-color: #8e6dfd;
+}
+
+@media (max-width: 600px) {
+  .day {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
+} */
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f6fb;
+  text-align: center;
+}
+
+h1 {
+  color: #7c5dfa;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+select {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.weekdays div {
+  padding: 10px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.day {
+  background: white;
+  border-radius: 10px;
+  min-height: 110px;
+  padding: 5px;
+  position: relative;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day.completed {
+  background: #7c5dfa;
+  color: white;
+}
+
+.day-number {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task {
+  background: #eee;
+  padding: 4px;
+  margin: 3px 0;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task button {
+  background: red;
+  border: none;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #7c5dfa;
+  transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+  .day {
+    min-height: 90px;
+    font-size: 12px;
+  }
+}
